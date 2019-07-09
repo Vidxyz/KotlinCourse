@@ -5,6 +5,11 @@ import java.util.*
 
 class Customer(val id: Int, var name: String, val yearOfBirth: Int)  {
     // No concept of fields, only PROPERTIES
+    // By and large, visibility modifiers in Kotlin are public
+    // private - accessible within same file/class members
+    // internal - anywhere in the same module
+    // protected - only accessible by same class and subclasses
+
 
     val age: Int
         // Multi line get() needs curly braces
@@ -30,6 +35,10 @@ class Customer(val id: Int, var name: String, val yearOfBirth: Int)  {
     }
 
 
+    fun customerAsString(): String {
+        return "Name: $name, ssn: $ssn, age: $age"
+    }
+
 }
 
 
@@ -42,6 +51,8 @@ fun main() {
     println(customer.name)
     println(customer.age)
     println(customer.ssn)
+
+    println(customer.customerAsString())
 
 //    val c2 = Customer(11)
 

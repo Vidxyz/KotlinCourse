@@ -3,6 +3,7 @@ package com.vid.kotlin.classes
 import java.lang.IllegalArgumentException
 import java.util.*
 
+// Classes are first class citizens. Backing field concept is used for getters and setters
 class Customer(val id: Int, var name: String, val yearOfBirth: Int)  {
     // No concept of fields, only PROPERTIES
     // By and large, visibility modifiers in Kotlin are public

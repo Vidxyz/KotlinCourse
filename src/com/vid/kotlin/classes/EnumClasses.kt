@@ -36,6 +36,7 @@ fun main() {
     val priority1 = Priority.MINOR
 
     println(priority1)
+    println(priority1.text())
     println("\n")
 
     println(priority)
@@ -50,6 +51,8 @@ fun main() {
     for (priorityInList in Priority.values()) {
         println(priorityInList)
     }
+
+
 
     println('\n')
     val p = Priority.valueOf("MAJOR")

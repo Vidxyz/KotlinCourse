@@ -55,4 +55,8 @@ public class CustomerJava {
                 ", email='" + email + '\'' +
                 '}';
     }
+
+    public void prettyPrint() {
+        System.out.printf("Id: %d, Name: %s, Email: %s", id, name, email);
+    }
 }

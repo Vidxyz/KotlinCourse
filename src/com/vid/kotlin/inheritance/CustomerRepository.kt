@@ -17,6 +17,15 @@ interface CustomerRepository {
 
 }
 
+
+interface EmployeeRepository {
+    fun store(obj: Employee) {
+
+    }
+
+    fun getById(id: Int): Employee
+}
+
 class SQLCustomerRepository: CustomerRepository {
 
     override fun getById(id: Int): Customer {

@@ -1,6 +1,7 @@
 package com.vid.kotlin.interop;
 
 import com.vid.kotlin.classes.CustomerKotlin;
+import com.vid.kotlin.classes.CustomerKotlinKt;
 import com.vid.kotlin.classes.Status;
 
 import java.io.IOException;
@@ -34,6 +35,12 @@ public class TalkingToKotlin {
         // @JvmName annotation
         customerKotlin.preferential();
 
+        // Filename is referenced
+        TopLevelFunctionsKt.prefix("some", "value");
+        TopLevelFunctionsKt.getCopyRightYear();
+
+        // Extension functions are invoked in this manner
+        CustomerKotlinKt.extension(customerKotlin);
 
     }
 

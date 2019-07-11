@@ -1,8 +1,37 @@
 package com.vid.kotlin.classes
 
+import java.io.IOException
+
 // Data is like case in Scala - adds equals/hashcode/copy and toString methods
 // All these method can still be overridden
-data class CustomerKotlin(var id: Int, var name: String, var email: String)
+data class CustomerKotlin(var id: Int, var name: String, var email: String) {
+
+    @JvmField val someOtherProperty = "Value"
+
+    val someProperty = "Value"
+
+    @JvmOverloads fun changeStatus(status: Status = Status.Current) {
+
+    }
+
+
+    @JvmName("preferential") fun makePref() {
+
+    }
+
+    // Need this annotation if throwing exceptions
+    @Throws(IOException::class) fun loadStats(name: String) {
+        if (name == "") {
+            throw IOException("Filename cannot be empty")
+        }
+    }
+}
+
+enum class Status {
+    Current,
+    Past,
+    Future
+}
 
 
 fun main() {

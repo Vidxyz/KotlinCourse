@@ -1,5 +1,7 @@
 package com.vid.kotlin.classes;
 
+import com.sun.istack.internal.NotNull;
+
 import java.util.Objects;
 
 public class CustomerJava {
@@ -59,4 +61,15 @@ public class CustomerJava {
     public void prettyPrint() {
         System.out.printf("Id: %d, Name: %s, Email: %s", id, name, email);
     }
+
+
+
+    public @NotNull String neverNull() {
+        return "A String";
+    }
+
+    public String sometimesNull() {
+        return "A String";
+    }
+
 }
